@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewiteCond %(REQOEST_FILENAME) !-d
+RewiteCond %(REQOEST_FILENAME) !-f
+RewriteRule . index.php
