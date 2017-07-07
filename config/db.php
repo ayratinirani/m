@@ -1,12 +1,13 @@
 <?php
 class db{
-private $host,$user,$pass,$dbname,$connection;
-
+private $con;
 public function __construct($host,$username,$password,$dbname){
 
-$this->connection=new PDO("mysql:host=$host;dbname=$dbname;charset=utf8;",$username,$password);
+$this->con=new PDO("mysql:host=$host;dbname=$dbname;charset=utf8;",$username,$password);
 	
-	return $connection;
+}
+public function getDb(){
+	return $this->con;
 }
 
 }
