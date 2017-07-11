@@ -1,0 +1,19 @@
+<?php
+function encode($id){
+	require_once "DJWT.php";
+$token = array();
+ $token['id'] = $id; 
+return JWT::encode($token, SECRET_KEY);
+
+}
+function decode($json){
+	require_once "DJWT.php";
+$token = JWT::decode($json, SECRET_KEY); 
+return $token;
+}
+
+
+
+
+
+?>
